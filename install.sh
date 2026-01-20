@@ -153,7 +153,6 @@ declare -a SYMLINKS=(
     "git/config/ignore|.config/git/ignore"
     "tmux/.tmux.conf.local|.tmux.conf.local"
     "alacritty/alacritty.toml|.config/alacritty/alacritty.toml"
-    "zed/settings.json|.config/zed/settings.json"
     ".editorconfig|.editorconfig"
     ".claude/settings.json|.claude/settings.json"
 )
