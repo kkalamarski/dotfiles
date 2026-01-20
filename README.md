@@ -104,7 +104,11 @@ ln -s -f .tmux/.tmux.conf
 
 #### Neovim Configuration
 
-Neovim configuration is managed in a separate repository and is not included here.
+Neovim configuration is managed in a separate repository:
+
+**[kkalamarski/neovim-config](https://github.com/kkalamarski/neovim-config)**
+
+See the repository for installation instructions and configuration details.
 
 ## Sensitive Data and Machine-Specific Settings
 
@@ -228,7 +232,7 @@ plugins=(git docker kubectl)
 
 The following are intentionally excluded:
 
-- **Neovim config** (`~/.config/nvim/`) - Managed in separate repository
+- **Neovim config** (`~/.config/nvim/`) - Managed in [separate repository](https://github.com/kkalamarski/neovim-config)
 - **Tmux framework** (`~/.tmux/`) - External repo (gpakosz/.tmux)
 - **oh-my-zsh** (`~/.oh-my-zsh/`) - Third-party framework
 - **SSH keys** (`~/.ssh/`) - Sensitive credentials
