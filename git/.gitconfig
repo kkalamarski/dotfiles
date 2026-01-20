@@ -1,0 +1,5 @@
+[user]
+	email = kkalamarski@gmail.com
+	name = Krzysztof Kalamarski
+[pull]
+	rebase = false

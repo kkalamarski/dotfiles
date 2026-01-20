@@ -1,0 +1,18 @@
+# Backup directory
+backup/
+
+# Local machine-specific files
+*.local
+
+# System files
+.DS_Store
+
+# Sensitive data patterns
+*secret*
+*token*
+*key*
+.env
+
+# Temporary files
+*.tmp
+*.swp
