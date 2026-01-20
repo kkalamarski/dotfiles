@@ -1,5 +1,99 @@
+# Git Configuration
+# User identity
 [user]
 	email = kkalamarski@gmail.com
 	name = Krzysztof Kalamarski
+
+# Core settings
+[core]
+	editor = nvim
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab
+	precomposeunicode = true
+	excludesfile = ~/.config/git/ignore
+
+# Default branch and push behavior
+[init]
+	defaultBranch = main
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
 [pull]
 	rebase = false
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+# Color configuration
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+
+# Diff and merge settings
+[diff]
+	algorithm = histogram
+	colorMoved = default
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[mergetool]
+	prompt = false
+	keepBackup = false
+
+# Remember merge conflict resolutions
+[rerere]
+	enabled = true
+
+# Help autocorrect (wait 1.5 seconds before running corrected command)
+[help]
+	autocorrect = 15
+
+# Aliases - Shortcuts
+[alias]
+	# Status shortcuts
+	s = status --short --branch
+	st = status
+
+	# Checkout shortcuts
+	co = checkout
+	br = branch
+	ci = commit
+
+	# Commit shortcuts
+	amend = commit --amend --no-edit
+	undo = reset HEAD~1 --mixed
+
+	# Log shortcuts
+	l = log --oneline --graph --decorate -20
+	ll = log --oneline --graph --decorate --all
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+	# Branch management
+	branches = branch --sort=-committerdate
+	cleanup = !git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 git branch -d
+
+	# Misc shortcuts
+	unstage = reset HEAD --
+	discard = checkout --
+	last = log -1 HEAD
+	alias = config --get-regexp ^alias\\.

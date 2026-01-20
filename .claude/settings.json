@@ -1,0 +1,29 @@
+{
+  "$schema": "https://storage.googleapis.com/anthropic-static-assets/claude-code/settings-schema-v1.json",
+  "allowedPrompts": [],
+  "enableStatusLine": true,
+  "statusLineOptions": {
+    "showTimestamp": true,
+    "showModel": true,
+    "showTokenCount": true
+  },
+  "mcpServers": {},
+  "hooks": {
+    "postToolCall": {},
+    "prePromptSubmit": {}
+  },
+  "contextManagement": {
+    "autoSummarize": true,
+    "maxContextTokens": 200000
+  },
+  "codeStyle": {
+    "preferSimplicity": true,
+    "addCommentsOnlyWhenNeeded": true,
+    "followProjectConventions": true
+  },
+  "gitIntegration": {
+    "autoCommit": false,
+    "conventionalCommits": true,
+    "signCommits": false
+  }
+}
